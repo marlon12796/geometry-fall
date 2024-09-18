@@ -10,7 +10,7 @@ interface ShapeProps {
   position: [number, number, number]
 }
 
-export const Shape: React.FC<ShapeProps> = ({ shape, color, ...props }) => {
+const Shape: React.FC<ShapeProps> = ({ shape, color, ...props }) => {
   const [ref, api] = useBox(() => ({ mass: 1, ...props, scale: [2, 2, 2] })) // Aumenta la escala
   const [isClicked, setIsClicked] = useState(false)
 
@@ -46,3 +46,4 @@ export const Shape: React.FC<ShapeProps> = ({ shape, color, ...props }) => {
     </mesh>
   )
 }
+export default Shape
