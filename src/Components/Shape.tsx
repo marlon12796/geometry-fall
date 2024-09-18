@@ -16,7 +16,7 @@ export const Shape: React.FC<ShapeProps> = ({ shape, color, ...props }) => {
 
   useFrame(() => {
     if (isClicked) {
-      api.applyForce([0, 5, 0], [0, 0, 0])
+      api.applyForce([0, 8, 0], [0, 0, 0])
     }
   })
 

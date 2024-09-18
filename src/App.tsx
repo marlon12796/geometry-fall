@@ -59,10 +59,10 @@ const App: React.FC = () => {
 
   return (
     <div style={{ width: '100vw', height: '100vh', backgroundColor: '#f0f0f0', overflow: 'hidden' }}>
-      <Canvas camera={{ position: [0, 8, 15], fov: 60 }}>
+      <Canvas camera={{ position: [0, 8, 15], fov: 60}}>
         <ambientLight intensity={0.7} />
         <pointLight position={[10, 10, 10]} intensity={0.8} />
-        <Physics gravity={[0, -2, 0]}>
+        <Physics gravity={[0, -3, 0]}>
           <Plane position={[0, -10, 0]} /> 
           {shapes.map(({ id, shape, color, position }) => (
             <Shape key={id} shape={shape} color={color} position={position} />
